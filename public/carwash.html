@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Car Wash Gallery</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { background: #f8f9fa; }
+    .card-img-top { object-fit: cover; height: 220px; }
+
+    .img-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.375rem;
+    }
+
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: transform .35s ease;
+      will-change: transform;
+    }
+
+    .img-wrap:hover img {
+      transform: scale(1.06);
+    }
+
+    /* sponge icon on hover (uses emoji for simplicity) */
+    .img-wrap::after {
+      content: 'saajan';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+      line-height: 1;
+      background: rgba(255,255,255,0.9);
+      padding: 6px 8px;
+      border-radius: 6px;
+      box-shadow: 0 3px 8px rgba(177, 22, 22, 0.12);
+      z-index: 5;
+      white-space: nowrap;
+      opacity: 0;
+      color: blue;
+      transform: translateY(-6px) scale(.9);
+      transition: opacity .18s ease, transform .18s ease;
+      pointer-events: none;
+    }
+
+    .img-wrap:hover::after {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .card-title { font-size: 1rem; margin-bottom: 0.25rem; }
+    .caption { font-size: .875rem; color: #6c757d; }
+  </style>
+</head>
+<body>
+  <main class="container py-5">
+    <!-- ...existing code... -->
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card shadow-sm">
+          <div class="img-wrap">
+            <img src="https://source.unsplash.com/600x400/?car-wash&sig=11" class="card-img-top" alt="Car being washed 1">
+          </div>
+          <!-- ... -->
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card shadow-sm">
+          <div class="img-wrap">
+            <img src="https://source.unsplash.com/600x400/?car-wash&sig=12" class="card-img-top" alt="Car being washed 2">
+          </div>
+          <!-- ... -->
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card shadow-sm">
+          <div class="img-wrap">
+            <img src="https://source.unsplash.com/600x400/?car-wash&sig=13" class="card-img-top" alt="Car being washed 3">
+          </div>
+          <!-- ... -->
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card shadow-sm">
+          <div class="img-wrap">
+            <img src="https://source.unsplash.com/600x400/?car-wash&sig=14" class="card-img-top" alt="Car being washed 4">
+          </div>
+          <!-- ... -->
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ...existing code... -->
+</body>
+</html>
